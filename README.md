@@ -1,98 +1,88 @@
 # SegStudio
 
-SegStudio 是一个面向红细胞图像分割的轻量级桌面应用，包含普通模式查看结果、管理员模式训练与模型管理，以及管理员密码修改功能。
+> A lightweight desktop application for medical image segmentation based on deep learning.
 
-## 1. 环境要求
+## 📖 Introduction
 
-- Windows 10/11
-- Python 3.10 或 3.11
-- Git
+SegStudio 是一个基于 Python 开发的医学图像分割桌面应用，面向红细胞图像智能分割场景，实现了图像加载、模型推理、结果可视化以及模型管理等功能。
 
-## 2. 本地运行
+项目采用模块化设计，可作为医学图像分割算法验证平台，也可作为深度学习模型部署的基础框架。
 
-在项目根目录执行：
+---
+
+## ✨ Features
+
+* 🖼️ 图像加载与预览
+* 🤖 深度学习模型推理
+* 🎯 红细胞智能分割
+* 📊 分割结果可视化
+* 🔐 管理员模式
+* ⚙️ 模型管理
+* 🧪 模型训练入口
+* 🔑 管理员密码修改
+
+---
+
+## 📂 Project Structure
+
+```text
+SegStudio
+│
+├── app/                # GUI 与业务逻辑
+├── models/             # 深度学习模型
+├── tests/              # 测试代码
+├── requirements.txt    # 项目依赖
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 🛠️ Technology Stack
+
+* Python 3.10+
+* PySide6
+* PyTorch
+* OpenCV
+* NumPy
+
+---
+
+## 🚀 Quick Start
+
+### Clone
+
+```bash
+git clone https://github.com/lanlanyangyang/SegStudio.git
+cd SegStudio
+```
+
+### Install
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+### Run
+
+```bash
 python app/main.py
 ```
 
-如果你使用的是当前工作区的虚拟环境，也可以直接运行：
+---
 
-```bash
-D:\SegStudio\.venv\Scripts\python.exe app/main.py
-```
+## 🎯 Future Work
 
-## 3. 发布给别人
+* 支持更多医学图像类型
+* 增加批量预测
+* GPU 推理加速
+* 导出分割结果
+* 多模型切换
 
-当前项目最稳妥的方式是把整个项目文件夹打包给别人，或者只发给别人下面这几个目录：
+---
 
-- app/
-- models/
-- data/
-- requirements.txt
+## 📄 License
 
-别人收到后可以直接在本机创建虚拟环境并运行：
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python app/main.py
-```
-
-## 4. GitHub 发布流程
-
-### 5.1 初始化 Git 仓库
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### 5.2 创建 GitHub 仓库
-
-1. 打开 GitHub
-2. 点击 New repository
-3. 输入仓库名，例如：SegStudio
-4. 选择 Public 或 Private
-5. 创建仓库
-
-### 5.3 关联远程仓库
-
-```bash
-git remote add origin https://github.com/你的用户名/SegStudio.git
-git branch -M main
-git push -u origin main
-```
-
-### 5.4 后续更新
-
-```bash
-git add .
-git commit -m "Update UI and password feature"
-git push
-```
-
-## 6. 工作日志建议
-
-建议把以下内容记录下来：
-
-- 本次完成的功能
-- 遇到的错误与解决方案
-- 性能优化点
-- 未来待办项
-
-例如：
-
-- 增加普通模式结果查看与过滤逻辑
-- 增加管理员密码修改弹窗
-- 优化启动时模型加载路径
-- 解决 PySide6 与路径依赖问题
-
-## 7. 说明
-
-如果你想让别人更容易使用，建议把项目打包为一个单独的 exe，并附上简短使用说明。
+This project is for learning and academic research only.
